@@ -1,5 +1,7 @@
 vendor/*
 logs/*
 docs/build/*.xml
+docs/html
+docs/xml
 config/config.php
 misc/
