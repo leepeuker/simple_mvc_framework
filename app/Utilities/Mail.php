@@ -34,6 +34,9 @@ class Mail
             $mail->Host = Config::get('SMTP_HOST');
             $mail->Port = Config::get('SMTP_PORT');
             $mail->SMTPAuth = Config::get('SMTP_AUTH');
+            $mail->Username = Config::get('SMTP_USERNAME');
+            $mail->Password = Config::get('SMTP_PASSWORD');
+            $mail->SMTPSecure =Config::get('SMTP_SECURE');
         
             //Recipients
             $mail->setFrom(Config::get('EMAIL_WEBMASTER'));
