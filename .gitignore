@@ -1,0 +1,5 @@
+vendor/*
+logs/*
+docs/build/*.xml
+config/config.php
+misc/

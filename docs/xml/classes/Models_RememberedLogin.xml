@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Models\RememberedLogin" namespace="Models" name="RememberedLogin" abstract="false" final="false" start="14" end="73">
+  <file path="C:/xampp/htdocs/app/Models" file="RememberedLogin.php" realpath="C:/xampp/htdocs/app/Models/RememberedLogin.php" size="1845" time="2018-08-02T11:04:51+02:00" unixtime="1533200691" sha1="1babc7eb17d2664884eee939618b2b6fce867ad8" relative="Models/RememberedLogin.php"/>
+  <docblock>
+    <description compact="Remembered login model">PHP version 7.0</description>
+  </docblock>
+  <extends full="Core\Model" namespace="Core" name="Model"/>
+  <method name="findByToken" start="24" end="37" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Find a remembered login model by the token"/>
+      <param description="The remembered login token" type="string" variable="$token"/>
+      <return description="Remembered login object if found, false otherwise" type="mixed"/>
+    </docblock>
+    <parameter name="token" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="getUser" start="44" end="47" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Get the user model associated with this remembered login"/>
+      <return description="The user model" type="object">
+        <type full="Models\User" namespace="Models" name="User"/>
+      </return>
+    </docblock>
+  </method>
+  <method name="hasExpired" start="54" end="57" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="See if the remember token has expired or not, based on the current system time"/>
+      <return description="True if the token has expired, false otherwise" type="boolean"/>
+    </docblock>
+  </method>
+  <method name="delete" start="64" end="72" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Delete this model"/>
+      <return description="True if query was executed, false otherwise" type="boolean"/>
+    </docblock>
+  </method>
+  <parent full="Core\Model" namespace="Core" name="Model">
+    <method name="getDB" start="22" end="39" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Get the PDO User database connection"/>
+        <param description="DB name" type="string"/>
+        <return type="mixed"/>
+      </docblock>
+    </method>
+    <method name="whereLike" start="47" end="50" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Convert searchterm for mysql &quot;where like&quot; query"/>
+        <param description="String to convert" type="string" variable="$string"/>
+        <return description="Converted string" type="string"/>
+      </docblock>
+      <parameter name="string" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="escapeVar" start="58" end="61" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Escape variables which can not be prepared to prevent sql injections"/>
+        <param description="String to ecscape" type="string" variable="$string"/>
+        <return description="Ecscape string" type="string"/>
+      </docblock>
+      <parameter name="string" byreference="false" type="{unknown}"/>
+    </method>
+    <method name="validateSortOrder" start="69" end="72" abstract="false" final="false" static="true" visibility="protected">
+      <docblock>
+        <description compact="Validate sort order to prevent sql injections"/>
+        <param description="String to validate" type="string" variable="$string"/>
+        <return description="Validate string" type="string"/>
+      </docblock>
+      <parameter name="string" byreference="false" type="{unknown}"/>
+    </method>
+  </parent>
+</class>

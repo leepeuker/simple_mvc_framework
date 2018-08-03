@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Core\View" namespace="Core" name="View" abstract="false" final="false" start="10" end="68">
+  <file path="C:/xampp/htdocs/app/Core" file="View.php" realpath="C:/xampp/htdocs/app/Core/View.php" size="1858" time="2018-08-01T14:10:10+02:00" unixtime="1533125410" sha1="1d7c1d571f4ef2194d8820fbff8de1b9974354c8" relative="Core/View.php"/>
+  <docblock>
+    <description compact="Base view">PHP version 7.0</description>
+  </docblock>
+  <method name="render" start="19" end="30" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Render a view file"/>
+      <param description="The view file" type="string" variable="$view"/>
+      <param description="Associative array of data to display in the view (optional)" type="array" variable="$args"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="view" byreference="false" type="{unknown}"/>
+    <parameter name="args" byreference="false" type="array" default=""/>
+    <inline>
+      <comment value="relative to Core directory" line="23"/>
+    </inline>
+  </method>
+  <method name="renderTemplate" start="39" end="42" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Render a view template using Twig"/>
+      <param description="The template file" type="string" variable="$template"/>
+      <param description="Associative array of data to display in the view (optional)" type="array" variable="$args"/>
+      <return type="object">
+        <type full="Core\void" namespace="Core" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="template" byreference="false" type="{unknown}"/>
+    <parameter name="args" byreference="false" type="array" default=""/>
+  </method>
+  <method name="getTemplate" start="51" end="67" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Get the contents of a view template using Twig"/>
+      <param description="The template file" type="string" variable="$template"/>
+      <param description="Associative array of data to display in the view (optional)" type="array" variable="$args"/>
+      <return description="Rendered template" type="string"/>
+    </docblock>
+    <parameter name="template" byreference="false" type="{unknown}"/>
+    <parameter name="args" byreference="false" type="array" default=""/>
+  </method>
+</class>

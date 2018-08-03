@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="Core\Model" namespace="Core" name="Model" abstract="true" final="false" start="13" end="73">
+  <file path="C:/xampp/htdocs/app/Core" file="Model.php" realpath="C:/xampp/htdocs/app/Core/Model.php" size="1873" time="2018-07-30T13:39:11+02:00" unixtime="1532950751" sha1="e8de4d11b9307e689ead37a9c87808657a36c1a6" relative="Core/Model.php"/>
+  <docblock>
+    <description compact="Base model">PHP version 7.0</description>
+  </docblock>
+  <method name="getDB" start="22" end="39" abstract="false" final="false" static="true" visibility="protected">
+    <docblock>
+      <description compact="Get the PDO User database connection"/>
+      <param description="DB name" type="string"/>
+      <return type="mixed"/>
+    </docblock>
+  </method>
+  <method name="whereLike" start="47" end="50" abstract="false" final="false" static="true" visibility="protected">
+    <docblock>
+      <description compact="Convert searchterm for mysql &quot;where like&quot; query"/>
+      <param description="String to convert" type="string" variable="$string"/>
+      <return description="Converted string" type="string"/>
+    </docblock>
+    <parameter name="string" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="escapeVar" start="58" end="61" abstract="false" final="false" static="true" visibility="protected">
+    <docblock>
+      <description compact="Escape variables which can not be prepared to prevent sql injections"/>
+      <param description="String to ecscape" type="string" variable="$string"/>
+      <return description="Ecscape string" type="string"/>
+    </docblock>
+    <parameter name="string" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="validateSortOrder" start="69" end="72" abstract="false" final="false" static="true" visibility="protected">
+    <docblock>
+      <description compact="Validate sort order to prevent sql injections"/>
+      <param description="String to validate" type="string" variable="$string"/>
+      <return description="Validate string" type="string"/>
+    </docblock>
+    <parameter name="string" byreference="false" type="{unknown}"/>
+  </method>
+  <extenders>
+    <extender full="Models\RememberedLogin" namespace="Models" name="RememberedLogin"/>
+    <extender full="Models\User" namespace="Models" name="User"/>
+  </extenders>
+</class>

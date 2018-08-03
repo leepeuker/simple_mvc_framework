@@ -1,0 +1,32 @@
+{% extends "layout/base.html" %}
+
+{% block content %}
+    <br>
+    <div class="card mx-auto" style="width:400px">
+        <div class="card-body">
+            <h2 style="margin-bottom:15px">Registration</h2>
+            <form method="POST" action="/registration/store">
+                <div class="form-group">
+                    <label for="input_email">Email address</label>
+                    <input type="email" name="email" class="form-control" id="input_email" aria-describedby="emailHelp" required>
+                </div>
+                <div class="form-group">
+                    <label for="input_password">Password</label>
+                    <input type="password" name="password" class="form-control" id="input_password" required>
+                </div>
+                <div class="form-group">
+                    <label for="input_repeat_password">Repeat Password</label>
+                    <input type="password" name="passwordRepeat" class="form-control" id="input_repeat_password" required>
+                </div>
+                <button type="submit" class="btn btn-primary" {% if flash_messages %} style="margin-bottom:17px" {% endif %}>Submit</button>
+                {% if flash_messages %}
+                    {% for message in flash_messages %}
+                        <div class="alert alert-{{ message.type }}" role="alert">
+                            {{ message.body }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </form>
+        </div>
+    </div>
+{% endblock %}
