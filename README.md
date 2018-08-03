@@ -1,7 +1,6 @@
 # simple_mvc_framework
 
 This is a simpel and neat framework for (little to medium sized) PHP web applications/sites following the MVC architectural pattern.
-
 It was primarly build to be served by apache2.
 
 ### Requirements
