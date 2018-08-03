@@ -1,7 +1,0 @@
-<?php
-
-$messages = [
-    
-];
-
-return $messages;
