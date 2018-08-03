@@ -23,4 +23,4 @@ Edit the file and fill in your configuration settings.
 
 ### Request Life-cycle
 The URLs of the incoming requests will be rewritten by the .htaccess and mapped to the index.php.
-The index.php will bootstrap the application, add pecified routes and dispatch the request to an action-method of a controller. The Controller processes the request and can send a response the the client. 
+The index.php will bootstrap the application, add the specified routes and dispatch the request to an action-method of a controller. The Controller processes the request and can send a response back the the client. 
