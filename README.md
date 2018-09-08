@@ -21,6 +21,9 @@ $ composer install
 Rename the "config/config.DUMMY.php" to "config/config.php"
 Edit the file and fill in your configuration settings.
 
+### Apache Configuration
+The Document-Root of the Apache server must be the public directory! Otherwise the framework will not work.
+
 ### Request Life-cycle
 The URLs of the incoming requests will be rewritten by the .htaccess and mapped to the index.php.
-The index.php will bootstrap the application, add the specified routes and dispatch the request to an action-method of a controller. The Controller processes the request and sends a response back the the client. 
+The index.php will bootstrap the application, add the specified routes and dispatch the request to an action-method of a controller. The controller processes the request and sends a response back the the client. 
